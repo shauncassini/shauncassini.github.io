@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shaun Cassini</title>
+    <link>http://shauncassini.github.io/</link>
+    <description>Recent content on Shaun Cassini</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://shauncassini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome!</title>
+      <link>http://shauncassini.github.io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shauncassini.github.io/</guid>
+      <description>Welcome to my website, where you can expect to find blogposts and interesting things, puzzles, algorithms, book reviews, experiences and career-building goodness. I am in my final masters year studying AI and Computer Science at the University of Sheffield, UK. Currently what interests me is chaos theory and trying to predict nonlinear behaviour - a seemingly incompatible statement - which falls under the umbrella of signal processing and AI. My masters thesis, run by Dr.</description>
+      <content>&lt;p&gt;Welcome to my website, where you can expect to find blogposts and interesting things, puzzles, algorithms, book reviews, experiences and career-building goodness. I am in my final masters year studying AI and Computer Science at the University of Sheffield, UK. Currently what interests me is chaos theory and trying to predict nonlinear behaviour - a seemingly incompatible statement - which falls under the umbrella of signal processing and AI. My masters thesis, run by &lt;a href=&#34;https://www.sheffield.ac.uk/dcs/people/academic/joab-winkler&#34;&gt;Dr. Joab Winkler&lt;/a&gt;, involves the mathematical analysis of echo-state networks tasked with chaotic time series forecasting.&lt;/p&gt;
+&lt;p&gt;This, and (soon!) much more, you can read about in posts on this site. Check out my &lt;a href=&#34;http://shauncassini.github.io/posts/hexagon&#34;&gt;latest blog&lt;/a&gt; on using an evolutionary algorithm to solve the magic hexagon problem.&lt;/p&gt;
+
+
+
+&lt;div class=&#39;button holder&#39;&gt;
+
+  &lt;div id=&#39;first&#39; class=&#34;button link&#34;&gt;LinkedIn&lt;/div&gt;
+  &lt;div id=&#39;second&#39; class=&#34;button link&#34;&gt;CV&lt;/div&gt; 
+  &lt;div id=&#39;third&#39; class=&#34;button link&#34;&gt;GitHub&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+	var linkedin = document.getElementById(&#39;first&#39;);
+	var cv = document.getElementById(&#39;second&#39;);
+	var github = document.getElementById(&#39;third&#39;);
+
+	// var toot = document.getElementsByTagName(&#39;a&#39;)[0];
+
+	// toot.onclick = function (){
+	// 		var audio = new Audio(&#39;toot.m4a&#39;);
+	// 		audio.play();
+	// }
+
+	linkedin.addEventListener(&#34;mouseenter&#34;, function( event ) {
+			let xhr = new XMLHttpRequest();
+					xhr.open(&#39;GET&#39;, &#39;linkedin.m4a&#39;);
+					xhr.responseType = &#39;arraybuffer&#39;;
+			var audio = new Audio(&#39;linkedin.m4a&#39;);
+			audio.play();
+	})
+
+	cv.addEventListener(&#34;mouseenter&#34;, function( event ) {
+			let xhr = new XMLHttpRequest();
+					xhr.open(&#39;GET&#39;, &#39;audio-CV.m4a&#39;);
+					xhr.responseType = &#39;arraybuffer&#39;;
+			var audio = new Audio(&#39;CV.m4a&#39;);
+			audio.play();
+	})
+
+	github.addEventListener(&#34;mouseenter&#34;, function( event ) {
+			let xhr = new XMLHttpRequest();
+					xhr.open(&#39;GET&#39;, &#39;audio-github.m4a&#39;);
+					xhr.responseType = &#39;arraybuffer&#39;;
+			var audio = new Audio(&#39;github.m4a&#39;);
+			audio.play();
+	})
+
+	linkedin.onclick = function (){
+			window.open(&#39;https://www.linkedin.com/in/s-cassini/&#39;, &#39;_blank&#39;);
+			// var audio = new Audio(&#39;toot.m4a&#39;);
+			// audio.play();
+	}
+
+	cv.onclick = function (){
+			window.open(&#39;https://www.google.com/&#39;, &#39;_blank&#39;);
+			// var audio = new Audio(&#39;toot2.m4a&#39;);
+			// audio.play();
+	}
+
+	github.onclick = function () {
+			window.open(&#39;https://github.com/shauncassini&#39;, &#39;_blank&#39;);
+			// var audio = new Audio(&#39;toot3.m4a&#39;);
+			// audio.play();
+	}
+&lt;/script&gt;
+
+</content>
+    </item>
+    
+  </channel>
+</rss>

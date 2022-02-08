@@ -1,13 +1,13 @@
----
-title: "Solving the Magic Hexagon with an Evolutionary Algorithm"
-date: 2022-02-08
-tags: ["Puzzle", "Evolutionary Algorithm"]
-keywords: ["Puzzle", "Evolutionary Algorithm", "Magic Hexagon"]
-description: "Two years ago for Christmas, I got an 'impossible to solve' Magic Hexagon puzzle. Using the power of evolutionary genetic algorithms, numpy and millions of iterations, 'impossible' turned to less than a second of computation. The key ideas are simple: 1. Represent each state of the board as a *gene*. 2. Create a *population* of boards. 3. Randomly *mutate* each gene in the population. 4. Based on a *fitness measure*, select the best candiates from the mutated population and 5. *clone* the best candidates to create a new population and repeat until convergence. Through this cycle of evolution an apex gene emerges, and the unsolvable puzzle is solved."
-showFullContent: false
-readingTime: false
-draft: false
----
++++
+title = "Solving the Magic Hexagon with an Evolutionary Algorithm"
+date = 2022-02-08
+tags = ["Puzzle", "Evolutionary Algorithm"]
+keywords = ["Puzzle", "Evolutionary Algorithm", "Magic Hexagon"]
+description = "Two years ago for Christmas, I got an 'impossible to solve' Magic Hexagon puzzle. Using the power of evolutionary genetic algorithms, numpy and millions of iterations, 'impossible' turned to less than a second of computation. The key ideas are simple: 1. Represent each state of the board as a *gene*. 2. Create a *population* of boards. 3. Randomly *mutate* each gene in the population. 4. Based on a *fitness measure*, select the best candiates from the mutated population and 5. *clone* the best candidates to create a new population and repeat until convergence. Through this cycle of evolution an apex gene emerges, and the unsolvable puzzle is solved."
+showFullContent = false
+readingTime = false
+draft = false
++++
 
 ## Sudoku on steroids
 

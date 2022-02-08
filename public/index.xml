@@ -353,28 +353,18 @@ population &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span s
     </item>
     
     <item>
-      <title>Using an Actor-Critic agent to Complete Peg Solitaire</title>
-      <link>http://shauncassini.github.io/posts/solitaire/</link>
-      <pubDate>Sun, 23 Jan 2022 18:49:42 +0000</pubDate>
-      
-      <guid>http://shauncassini.github.io/posts/solitaire/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title></title>
       <link>http://shauncassini.github.io/words/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://shauncassini.github.io/words/</guid>
-      <description>Interesting words Words - many of them. I find some of these when reading books, papers, articles, or in converstation. Many of these may seem trivial, but at the time, they were not.
-Test yourself with Shuffle Mode  WordDefinition    import { wordList } from &#39;../words.js&#39;; function loadTableData(items) { const table = document.getElementById(&#39;word_body&#39;); wordList.forEach ( item = { let row = table.insertRow(); let word = row.insertCell(0); word.</description>
+      <description>Interesting words Words - many of them. I find some of these when reading books, papers, articles, or in converstation.
+Test yourself with Shuffle Mode  WordDefinition    import { wordList } from &#39;../words.js&#39;; function loadTableData(items) { const table = document.getElementById(&#39;word_body&#39;); wordList.forEach ( item = { let row = table.insertRow(); let word = row.insertCell(0); word.innerHTML = item.word; let definition = row.insertCell(1); definition.innerHTML = item.definition; definition.classList.toggle(&#39;definition&#39;); definition.id = item.</description>
       <content>
  
 &lt;h1 class=&#34;section-title main words&#34;&gt;&lt;a&gt;Interesting words&lt;/a&gt;&lt;/h1&gt; 
 
-&lt;p&gt;Words - many of them. I find some of these when reading books, papers, articles, or in converstation. Many of these may seem trivial, but at the time, they were not.&lt;/p&gt;
+&lt;p&gt;Words - many of them. I find some of these when reading books, papers, articles, or in converstation.&lt;/p&gt;
 
  
 

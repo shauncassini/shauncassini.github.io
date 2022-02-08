@@ -1,10 +1,28 @@
 {{ define "main" }}
   {{ if .Content }}
-    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
-      {{ .Content }}
+    <!-- <div class="index-content {{ if .Params.framed -}}framed{{- end -}}"> -->
+    <div class="post">
+      {{ if .Params.title_page }}
+          {{ if and (gt now.Hour 5) (lt now.Hour 12) }}
+            <h1 class="post-title main"><a> Good Morning! </a></h1>
+          {{ else }}
+            {{ if and (gt now.Hour 11) (lt now.Hour 18) }}
+                <h1 class="post-title main"><a> Good Afternoon! </a></h1>
+            {{ else }}
+                <h1 class="post-title main"><a> Good Evening! </a></h1>
+            {{ end }}
+          {{ end }}
+         {{ .Content }}
+      {{ else }}
+         {{ .Content }}
+      {{ end }}
+      
     </div>
   {{ end }}
-  <div class="posts">
+
+  
+  
+  <!-- <div class="posts">
     {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
     {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
 
@@ -44,11 +62,13 @@
 
         <div class="post-content">
           {{ if .Params.showFullContent }}
-            {{ .Content }}
+          {{ .Content }}
           {{ else if .Description }}
-            {{ .Description | markdownify }}
+          {{ .Description | markdownify }}
           {{ else }}
-            {{ .Summary | markdownify }}
+          {{ if .Truncated }}
+          {{ .Summary }}
+          {{ end }}
           {{ end }}
         </div>
 
@@ -61,5 +81,5 @@
       </div>
     {{ end }}
     {{ partial "pagination.html" . }}
-  </div>
+  </div> -->
 {{ end }}

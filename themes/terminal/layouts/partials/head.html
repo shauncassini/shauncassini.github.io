@@ -9,16 +9,10 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="/assets/style.css">
-{{ if (isset .Params "color") }}
-  <link rel="stylesheet" href="/assets/red.css">
-{{ else if and (ne $.Site.Params.ThemeColor "orange") (ne $.Site.Params.ThemeColor "color" "") }}
-  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
-{{ end }}
+<link rel="stylesheet" href="/assets/red.css">
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-{{ if (fileExists "static/style.css") -}}
-  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
-{{- end }}
+<link rel="stylesheet" href="style.css">
 
 <!-- Icons -->
 <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | absURL }}">

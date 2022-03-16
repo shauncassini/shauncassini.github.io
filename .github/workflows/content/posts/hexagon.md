@@ -31,7 +31,7 @@ Artifical evolution and EAs take inspiration from their natural counterpart as a
 
 ```python
 while True:
-		# Create offspring population
+	# Create offspring population
     candidates = select(population)
     offspring  = mutate(candidates)
     # Update population 
@@ -287,7 +287,7 @@ Since we're dealing with a stochastic algorithm, we can only *estimate* the perf
 
 \\[ H(\mu, \sigma) = {\left(0.5 \left(\frac{1}{1 - \mu} + \frac{1}{1 - \sigma} \right) \right)^{-1}} \\]
 
-where the mean and variance \\(\mu, \sigma \in  [ε, 1] \\) are both normalized beteween 1 and a tiny non-zero value.
+where the mean and variance \\(\mu, \sigma \in  [ε, 1] \\) are both normalized beteween 1 and a tiny non-zero value. You can see how the harmonic mean values both a low variance and low mean in the plot below:
 
 {{< rawhtml >}}
 <img style='width: 70%;  margin: auto; margin-top: -80px;'src = '../hexagon/harmonic_mean.svg' alt=''></img>
@@ -423,7 +423,7 @@ If we assume that a population's fitness distribution is Gaussian, maybe the con
 
 Clifford W. Adams started work on finding a mathematical solution to the Hexagon in 1910 and eventually solved it in 1957. He saw the puzzle in a mathematical journal, wondered how it worked, and proceeded to go down a 47-year-deep rabbit hole. Our EA found solved the puzzle in less than a second, but solutions have fractal borders. I ended up ending more questions than I came in with. I hope that someday I'll write a follow-up to this problem after a *lot* more background. If you're curious to poke around at the algorithm yourself, [feel free](https://github.com/shauncassini/magic-hexagon). I'd love to see what you come up with!
 
-I'd like to thank my housemates for their insights and for putting up with my relentless (maybe a little obsessive) verbal thinking and my friend Nicola Mendini, who love's puzzles as much as I do, and without whom I would still be shuffling tiles around by hand. Above all, I'd like to thank my dad for surprising me with this hexagon for Christmas - I told you I'd solve it.
+I'd like to thank my housemates for their insights and for putting up with my relentless (maybe a little obsessive) verbal thinking and my friend Nicola Mendini, who loves puzzles as much as I do, and without whom I would still be shuffling tiles around by hand. Above all, I'd like to thank my dad for surprising me with this hexagon for Christmas - I told you I'd solve it.
 
 ## Future work
 

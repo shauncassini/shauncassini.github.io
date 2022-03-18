@@ -3,7 +3,7 @@
     <!-- <div class="index-content {{ if .Params.framed -}}framed{{- end -}}"> -->
     <div class="post">
       {{ if .Params.title_page }}
-          {{ if and (gt now.Hour 5) (lt now.Hour 12) }}
+          <!-- {{ if and (gt now.Hour 5) (lt now.Hour 12) }}
             <h1 class="post-title main"><a> Good Morning! </a></h1>
           {{ else }}
             {{ if and (gt now.Hour 11) (lt now.Hour 18) }}
@@ -11,7 +11,7 @@
             {{ else }}
                 <h1 class="post-title main"><a> Good Evening! </a></h1>
             {{ end }}
-          {{ end }}
+          {{ end }} -->
          {{ .Content }}
       {{ else }}
          {{ .Content }}

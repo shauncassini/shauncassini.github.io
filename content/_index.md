@@ -4,6 +4,10 @@ title_page: true
 draft: false
 ---
 
+{{< rawhtml >}} 
+<h1 class="post-title main" id="title"><a></a></h1> 
+{{< /rawhtml >}} 
+
 Welcome to my website, where you can expect to find blogposts and interesting things, puzzles, algorithms, book reviews, experiences and career-building goodness. I am in my final masters year studying AI and Computer Science at the University of Sheffield, UK. Currently what interests me is chaos theory and trying to predict nonlinear behaviour - a seemingly incompatible statement - which falls under the umbrella of signal processing and AI. My masters thesis, run by [Dr. Joab Winkler](https://www.sheffield.ac.uk/dcs/people/academic/joab-winkler), involves the mathematical analysis of echo-state networks tasked with chaotic time series forecasting.
 
 This, and (soon!) much more, you can read about in posts on this site. Check out my [latest blog](/posts/hexagon) on using an evolutionary algorithm to solve the magic hexagon problem.
@@ -13,7 +17,7 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 <div class='button holder'>
 
   <div id='first' class="button link">LinkedIn</div>
-  <div id='second' class="button link"><a href='./docs/Shaun_Cassini_CV.pdf ' target="_blank" rel="noopener noreferrer">CV</a></div> 
+  <div id='second' class="button link"><a href='./docs/Shaun_Cassini_CV.pdf ' target="_blank" rel="noopener noreferrer" id='cv_btn'>CV</a></div> 
   <div id='third' class="button link">GitHub</div>
 
 </div>
@@ -22,6 +26,7 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 	var linkedin = document.getElementById('first');
 	var cv = document.getElementById('second');
 	var github = document.getElementById('third');
+    var title = document.getElementById('title');
 
 	// var toot = document.getElementsByTagName('a')[0];
 
@@ -29,6 +34,19 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 	// 		var audio = new Audio('toot.m4a');
 	// 		audio.play();
 	// }
+
+    // Change title based on time
+    const time = new Date();
+    console.log(time);
+
+    hrs = time.getHours();
+
+    if (hrs > 5 && hrs < 12)
+        title.innerHTML = "Good Morning!"
+    if (hrs > 11 && hrs < 17)
+        title.innerHTML = "Good Afternoon!"
+    else
+        title.innerHTML = "Good Evening!"
 
 	linkedin.addEventListener("mouseenter", function( event ) {
 			let xhr = new XMLHttpRequest();

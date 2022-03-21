@@ -234,11 +234,12 @@ Solution found!
 &lt;p>Observing convergence&lt;/p>
 &lt;/blockquote>
 &lt;p>In [2], it was noted that the runtime analyis of EAs has to be modified to the time when they coverge &lt;em>around&lt;/em> optimal solutions. It&amp;rsquo;s relatively easy to get close to solving a problem, and the optimal solution is more likely to reside around states with better fitness. When running the EA, the same rapid increase in fitness is observed in the first few runs. I wanted to see for myself how the average distribution of fitness over many populations changed over time, so I varied the number of iterations the EA could run for and recorded the average final distribution of fitness.&lt;/p>
-&lt;p>The results allow us to watch how many populations behave. It&amp;rsquo;s clear that they converge to some fitness space that&amp;rsquo;s doesn&amp;rsquo;t &lt;em>quite&lt;/em> contain the optimal solution. The properties of the new distribution (in green) are also essentially identical to its unfit predecessor.&lt;/p>
+&lt;p>The results allow us to observe how many populations behave. It&amp;rsquo;s clear that they converge to some fitness space that&amp;rsquo;s doesn&amp;rsquo;t &lt;em>quite&lt;/em> contain the optimal solution. The properties of the new distribution (in green) are also essentially identical to its unfit predecessor.&lt;/p>
 &lt;!-- raw HTML omitted -->
 &lt;!-- raw HTML omitted -->
 &lt;img id='convergence_gif' style='width: 70%; margin: auto;'src = '../hexagon/convergence.png' alt=''>&lt;/img>
-&lt;p>There also apprears to be a relationship between the mean and variance of the distribution as it gradually improves, which is better shown on the phase-space scatter plot of mean against variance. Using dynamical systems terms, there is an &amp;lsquo;attractor&amp;rsquo; on the distribution&amp;rsquo;s mean and variance at the point of convergence.&lt;/p>
+&lt;p>There also apprears to be a relationship between the mean and variance of the distribution as it gradually improves, which is better shown on the phase-space plot of the population&amp;rsquo;s mean against variance over time.&lt;/p>
+&lt;!-- raw HTML omitted -->
 &lt;img style='width: 50%; margin-top: -10px; float: left;' src = '../hexagon/convergence.svg' alt=''>&lt;/img>
 &lt;img style='width: 50%; margin-top: -10px; float: right;' src = '../hexagon/phasespace.svg' alt=''>&lt;/img>
 &lt;p>If we assume that a population&amp;rsquo;s fitness distribution is Gaussian, maybe the convergence of its mean and variance could be modelled as a set of &amp;lsquo;statistical&amp;rsquo; ordinary differential equations?&lt;/p>
@@ -283,10 +284,10 @@ convergence.src = '../hexagon/convergence.png'
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>There exist better models for this, such as Artifical Fitness Levels (AFLs) [3] or Drift Analyis [4] - the Markov chain is used to simply to illustrate a point.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>There exist better models for this, such as Artifical Fitness Levels (AFLs) [3] or Drift Analyis [4].&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2" role="doc-endnote">
-&lt;p>From a later experiment, it was found that an elitist implimentation of the EA which never removed its top candidate performed worse than one that didn&amp;rsquo;t. There are a few reasons for why I think this is. Firstly, our non-elitist algorithm allows for the same tile to be selected, i.e. a mutation with replacement that no impact on performance with a reasonable probablility. Top candidates, therefore, have a chance to be unaffected and placed back into the population as they were found. Modifying the EA so that it must swap tiles during mutation has a significantly worse impact on performance. It can be concluded that a blend of elitism and non-elitism gives a good exploration vs. exploitation tradeoff.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>From a later experiment, it was found that an elitist implimentation of the EA which never removed its top candidate performed worse than one that didn&amp;rsquo;t. There are a few reasons for why I think this is. Firstly, our non-elitist algorithm allows for the same tile to be selected. In other words, a mutation with replacement that has no impact on performance, meaning that top candidates have a chance to be unaffected and placed back into the population as they were found. Modifying the EA so that it &lt;em>must&lt;/em> swap tiles during mutation, however, has a significantly worse impact on performance. A blend of elitism and non-elitism gives a good exploration vs. exploitation tradeoff.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:3" role="doc-endnote">
 &lt;p>OneMax aims to find a binary string of all ones starting from a random binary string. Each mutation flips a bit at random. I&amp;rsquo;ve already started this experiment, and the EA is very capable of solving OneMax. Given the correct parameters, the EA&amp;rsquo;s performance on OneMax is essentially identical to the Hexagon puzzle! While the results are promising, this post has to wrap up somewhere.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>

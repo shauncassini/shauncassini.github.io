@@ -382,7 +382,7 @@ which translates to "given the likelihood that I improve is \\( P_{f > 0}(s, t_1
 
 In [2], it was noted that the runtime analyis of EAs has to be modified to the time when they coverge *around* optimal solutions. It's relatively easy to get close to solving a problem, and the optimal solution is more likely to reside around states with better fitness. When running the EA, the same rapid increase in fitness is observed in the first few runs. I wanted to see for myself how the average distribution of fitness over many populations changed over time, so I varied the number of iterations the EA could run for and recorded the average final distribution of fitness. 
 
-The results allow us to watch how many populations behave. It's clear that they converge to some fitness space that's doesn't *quite* contain the optimal solution. The properties of the new distribution (in green) are also essentially identical to its unfit predecessor. 
+The results allow us to observe how many populations behave. It's clear that they converge to some fitness space that's doesn't *quite* contain the optimal solution. The properties of the new distribution (in green) are also essentially identical to its unfit predecessor. 
 
 
 <!-- Again, a rough bit of code to aid understanding:
@@ -410,7 +410,9 @@ fitnesses = fitnesses.mean(axis=0) # average over samples
 <img id='convergence_gif' style='width: 70%; margin: auto;'src = '../hexagon/convergence.png' alt=''></img>
 {{< /rawhtml >}}
 
-There also apprears to be a relationship between the mean and variance of the distribution as it gradually improves, which is better shown on the phase-space scatter plot of mean against variance. Using dynamical systems terms, there is an 'attractor' on the distribution's mean and variance at the point of convergence.
+There also apprears to be a relationship between the mean and variance of the distribution as it gradually improves, which is better shown on the phase-space plot of the population's mean against variance over time. 
+
+<!-- Using dynamical systems terms, there is an 'attractor' on the distribution's mean and variance at the point of convergence. -->
 
 {{< rawhtml >}}
 <img style='width: 50%; margin-top: -10px; float: left;' src = '../hexagon/convergence.svg' alt=''></img> 
@@ -444,9 +446,9 @@ I'd like to thank my housemates for their insights and for putting up with my re
 
 # Footnotes
 
-[^1]: There exist better models for this, such as Artifical Fitness Levels (AFLs) [3] or Drift Analyis [4] - the Markov chain is used to simply to illustrate a point. 
+[^1]: There exist better models for this, such as Artifical Fitness Levels (AFLs) [3] or Drift Analyis [4]. 
 
-[^2]: From a later experiment, it was found that an elitist implimentation of the EA which never removed its top candidate performed worse than one that didn't. There are a few reasons for why I think this is. Firstly, our non-elitist algorithm allows for the same tile to be selected, i.e. a mutation with replacement that no impact on performance with a reasonable probablility. Top candidates, therefore, have a chance to be unaffected and placed back into the population as they were found. Modifying the EA so that it must swap tiles during mutation has a significantly worse impact on performance. It can be concluded that a blend of elitism and non-elitism gives a good exploration vs. exploitation tradeoff.
+[^2]: From a later experiment, it was found that an elitist implimentation of the EA which never removed its top candidate performed worse than one that didn't. There are a few reasons for why I think this is. Firstly, our non-elitist algorithm allows for the same tile to be selected. In other words, a mutation with replacement that has no impact on performance, meaning that top candidates have a chance to be unaffected and placed back into the population as they were found. Modifying the EA so that it *must* swap tiles during mutation, however, has a significantly worse impact on performance. A blend of elitism and non-elitism gives a good exploration vs. exploitation tradeoff.
 
 [^3]: OneMax aims to find a binary string of all ones starting from a random binary string. Each mutation flips a bit at random. I've already started this experiment, and the EA is very capable of solving OneMax. Given the correct parameters, the EA's performance on OneMax is essentially identical to the Hexagon puzzle! While the results are promising, this post has to wrap up somewhere.
 

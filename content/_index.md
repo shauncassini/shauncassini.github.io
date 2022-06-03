@@ -17,7 +17,7 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 <div class='button holder'>
 
   <div id='first' class="button link">LinkedIn</div>
-  <div id='second' class="button link"><a href='./docs/Shaun_Cassini_CV.pdf ' target="_blank" rel="noopener noreferrer" id='cv_btn'>CV</a></div> 
+  <!-- <div id='second' class="button link"><a href='./docs/Shaun_Cassini_CV.pdf ' target="_blank" rel="noopener noreferrer" id='cv_btn'>CV</a></div>  -->
   <div id='third' class="button link">GitHub</div>
 
 </div>

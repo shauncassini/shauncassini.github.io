@@ -280,17 +280,17 @@ convergence.addEventListener('mouseleave', function(e) {
 convergence.src = '../hexagon/convergence.png'
 });
 &lt;/script>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>There exist better models for this, such as Artifical Fitness Levels (AFLs) [3] or Drift Analyis [4].&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>From a later experiment, it was found that an elitist implimentation of the EA which never removed its top candidate performed worse than one that didn&amp;rsquo;t. There are a few reasons for why I think this is. Firstly, our non-elitist algorithm allows for the same tile to be selected. In other words, a mutation with replacement that has no impact on performance, meaning that top candidates have a chance to be unaffected and placed back into the population as they were found. Modifying the EA so that it &lt;em>must&lt;/em> swap tiles during mutation, however, has a significantly worse impact on performance. A blend of elitism and non-elitism gives a good exploration vs. exploitation tradeoff.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>OneMax aims to find a binary string of all ones starting from a random binary string. Each mutation flips a bit at random. I&amp;rsquo;ve already started this experiment, and the EA is very capable of solving OneMax. Given the correct parameters, the EA&amp;rsquo;s performance on OneMax is essentially identical to the Hexagon puzzle! While the results are promising, this post has to wrap up somewhere.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content></item></channel></rss>
+&lt;/div></content></item></channel></rss>

@@ -14,7 +14,7 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 
 {{< rawhtml >}}
 
-<div class='button holder'>
+<div style="width: 100%; text-align: center;">
 
   <div id='first' class="button link">LinkedIn</div>
   <!-- <div id='second' class="button link"><a href='./docs/Shaun_Cassini_CV.pdf ' target="_blank" rel="noopener noreferrer" id='cv_btn'>CV</a></div>  -->
@@ -24,7 +24,7 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 
 <script>
 	var linkedin = document.getElementById('first');
-	var cv = document.getElementById('second');
+	// var cv = document.getElementById('second');
 	var github = document.getElementById('third');
     var title = document.getElementById('title');
 
@@ -56,13 +56,13 @@ This, and (soon!) much more, you can read about in posts on this site. Check out
 			audio.play();
 	})
 
-	cv.addEventListener("mouseenter", function( event ) {
-			let xhr = new XMLHttpRequest();
-					xhr.open('GET', 'audio-CV.m4a');
-					xhr.responseType = 'arraybuffer';
-			var audio = new Audio('CV.m4a');
-			audio.play();
-	})
+	// cv.addEventListener("mouseenter", function( event ) {
+	// 		let xhr = new XMLHttpRequest();
+	// 				xhr.open('GET', 'audio-CV.m4a');
+	// 				xhr.responseType = 'arraybuffer';
+	// 		var audio = new Audio('CV.m4a');
+	// 		audio.play();
+	// })
 
 	github.addEventListener("mouseenter", function( event ) {
 			let xhr = new XMLHttpRequest();
